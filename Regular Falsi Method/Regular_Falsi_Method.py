@@ -84,9 +84,9 @@ def NearZeroIndexValues(equation):
 
     return closestNegValueindex, closestPosValueindex
         
-eq = " x^3 - 2x - 5"
-#a, b = NearZeroIndexValues(eq)
-a, b = 2,3
+eq = input("Enter equation: ")
+a, b = NearZeroIndexValues(eq)
+#a, b = 2,3
 #if i take a list and add a forloop and increase the list everytime the for loop occurs. I win
 iterations = []
 for i in range(0,15):    
@@ -106,7 +106,7 @@ for i in range(0, len(iterations)):
         break;
     if np.isclose(iterations[i], iterations[i+1], 0.0001):
         print("Similar till 3 decimal places at x", i+1,"\n")
-        print("Root of the equation can be", iterations[i],"\n")
+        print("Root of the equation is", iterations[i],"\n")
         Root = True
     if Root:
         break
